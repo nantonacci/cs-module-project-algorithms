@@ -7,24 +7,17 @@ Returns: an integer
 
 def eating_cookies(n):
     # Your code here
-    count = 1
-
-    if n == 0 or n == 1:
-        return count
-
+    # however many for n
+    # + however many for n-1
+    # and so on recursively 
+    if n == 0:
+        return 1
+    elif n == 1:
+        return 1
+    elif n == 2:
+        return 2
     else:
-        # 1 at a time for n
-        count += n
-        
-        # 2 at a time for n
-        n-2
-        count+=1
-
-        # 3 at a time for n
-        n-3
-        count+=1
-        return count
-    # pass
+        return eating_cookies(n-1) + eating_cookies(n-2) + eating_cookies(n-3)
 
 
 
