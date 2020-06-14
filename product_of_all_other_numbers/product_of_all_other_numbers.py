@@ -4,9 +4,38 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    # placeholder arr to return
+    # create another arr, remove current index
+    # multiply numbers of the second arr
+    # newarr = []
 
-    pass
+    # for i in arr:
+    #     multarr = []
+    #     result = 1
 
+    #     for n in arr:
+    #         multarr.append(n)
+        
+    #     multarr.remove(i)
+
+    #     for x in multarr:
+    #         result = result * x
+
+    #     newarr.append(result)
+    # return newarr
+
+    new_arr = []
+    for i in range(len(arr)):
+        product = 1
+        for j in range(len(arr)):
+            if i == j:
+                pass
+            else:
+                product *= arr[j]
+        new_arr.append(product)
+
+    return new_arr
+            
 
 if __name__ == '__main__':
     # Use the main function to test your implementation
